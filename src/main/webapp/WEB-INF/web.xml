@@ -17,7 +17,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>circuitoServlet</servlet-name>
-    <url-pattern>/circuito</url-pattern>
+    <url-pattern>/circuitos</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -47,6 +47,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>escuderiaServlet</servlet-name>
-    <url-pattern>/escuderia</url-pattern>
+    <url-pattern>/escuderias</url-pattern>
   </servlet-mapping>
 </web-app>
