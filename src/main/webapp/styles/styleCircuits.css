@@ -1,0 +1,252 @@
+/* Estilos para el encabezado */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.header {
+    background-color: #f3f3f3;
+    box-shadow: 0px 2px 20px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10% !important;
+    padding: 5px 10%;
+    top: 0;
+    /*el menu arriba*/
+    position: fixed;
+    /* me fija el menu*/
+    width: 100%;
+    /* Asegura que el menú ocupe todo el ancho de la ventana */
+    z-index: 1000;
+    /* Asegura que el menú esté por encima de otros elementos */
+}
+
+.header .logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.header .logo img {
+    height: 45px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+
+.header .nav-links {
+    list-style: none;
+    /*quitar puntos*/
+}
+
+.header .nav-links li {
+    display: inline-block;
+    /*quitalista y deja en linea*/
+    padding: 0px 25px;
+}
+
+.header .nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.header .nav-links a {
+    font-size: 20px;
+    color: #ff0000;
+    text-decoration: none;
+}
+
+.header .nav-links li a:hover {
+    color: #000000;
+}
+
+.header .btn button {
+    margin-left: 20px;
+    font-weight: 700;
+    color: #000000;
+    padding: 9px 25px;
+    background: #ff0000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover {
+    background-color: #000000;
+    color: #ff0000;
+    transform: scale(1.1);
+}
+
+
+.circuitos-lista {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.circuitos-lista li {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(224, 10, 10, 0.473);
+
+}
+
+.circuitos-lista img {
+    margin-right: 1rem;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.circuitos-info {
+    display: none;
+    transition: opacity 0.3s ease;
+    position: fixed;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #e04f4a;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #EF3B36);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #EF3B36);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 80%;
+    margin: 10px;
+}
+
+.circuitos-lista li img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 12px;
+    right: 3px;
+    cursor: pointer;
+
+}
+
+.info {
+    margin: 10px;
+
+}
+
+.cerrar img {
+    max-width: 15px;
+
+}
+
+section+div {
+
+    padding: 8%;
+}
+
+.circuitos-div h1 {
+    text-align: center;
+
+}
+
+/* ESTILOS DEL FOOTER */
+
+footer {
+    background-color: #f7f7f7;
+    padding: 30px 0 15px;
+  }
+  
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .list-footer .contacts-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+    padding-top: 25px;
+  }
+  
+  .list-footer .contacts-list li{
+    display: inline-block;
+    text-align: left;
+      padding: 0 10px;
+      /* Ajustar el espacio dentro de cada elemento de la lista */
+      margin: 0 5px;
+      /* Ajustar el espacio entre los elementos de la lista */
+  }
+  .footer-left,
+  .footer-right {
+    width: 45%;
+  }
+  
+  .footer-left h3,
+  .footer-right h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-left p,
+  .footer-right p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  form {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  input[type="email"] {
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    width: 70%;
+    font-size: 14px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .footer-text{
+    padding: 15px;
+  }
