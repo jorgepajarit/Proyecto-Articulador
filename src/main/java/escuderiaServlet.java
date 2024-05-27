@@ -12,6 +12,7 @@ public class escuderiaServlet extends HttpServlet {
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	RequestDispatcher dispatcher = request.getRequestDispatcher("escuderias.jsp");
+    	request.setAttribute("autor", "Lina Castro");
     	dispatcher.forward(request, response);
     }
 }

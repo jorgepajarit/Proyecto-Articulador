@@ -91,7 +91,9 @@
         <p>
           Recibe las últimas noticias y ofertas especiales directamente en tu
           bandeja de entrada.
-          <br><b>Create By: </b>
+          
+          
+          <br><b>Create By: ${autor}</b>
         </p>
         <form>
           <input type="email" placeholder="Ingresa tu correo electrónico" />

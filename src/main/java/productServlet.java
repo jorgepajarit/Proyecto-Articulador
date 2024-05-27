@@ -12,6 +12,7 @@ public class productServlet extends HttpServlet {
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	RequestDispatcher dispatcher = request.getRequestDispatcher("products.jsp");
+    	request.setAttribute("autor", "Cristian Rivera");
     	dispatcher.forward(request, response);
     }
 }

@@ -12,6 +12,9 @@ public class circuitoServlet extends HttpServlet {
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	RequestDispatcher dispatcher = request.getRequestDispatcher("circuitos.jsp");
+    	request.setAttribute("autor", "Juan David Castaneda Tenjo");
     	dispatcher.forward(request, response);
     }
+    
+    
 }
