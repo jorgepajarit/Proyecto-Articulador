@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>  
+  <%@ page import="java.util.Date" %>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -194,6 +195,54 @@
 
         </li>
     </ul>
+  </div>
+  
+  <div class="cronometro">
+  <h3> Mide tus reflejos</h3>
+<script>
+var segundos = 0;
+var miliseg =0;
+var cronometro;
+function iniciarCronometro(){
+	cronometro = setInterval(function(){
+		miliseg++;
+		if(miliseg >=1000){
+		segundos++;	
+		
+		}
+		
+		document.getElementById('contador').innerHTML = segundos + "." + miliseg;		
+	}, 1)
+}
+function detenerCrono(){
+	
+	clearInterval(cronometro);
+}
+</script>
+<div id="contador">
+
+
+<%!
+
+public String calculoSeg(){
+	long tiempoInicial = new Date().getTime();
+	long segundosTrans = 0 ;
+	while (segundosTrans < 10000){
+		long tiempoActual = new Date().getTime();
+		segundosTrans = (tiempoActual - tiempoInicial) / 1000;
+	}
+	
+	return segundosTrans + " Segundos Transcurridos";
+	
+} %> 
+
+
+
+</div>
+<button onclick="iniciarCronometro()">Iniciar</button>
+<button onclick="detenerCrono()">Parar</button>
+<p>Tiempo trnascurrido </p>
+
   </div>
 </body>
 <%@ include file ="footer.jsp"  %>
