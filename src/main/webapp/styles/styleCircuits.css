@@ -1,0 +1,80 @@
+.circuitos-lista {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.circuitos-lista li {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(224, 10, 10, 0.473);
+
+}
+
+.circuitos-lista img {
+    margin-right: 1rem;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.circuitos-info {
+    display: none;
+    transition: opacity 0.3s ease;
+    position: fixed;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #e04f4a;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #EF3B36);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #EF3B36);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 80%;
+    margin: 10px;
+}
+
+.circuitos-lista li img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 12px;
+    right: 3px;
+    cursor: pointer;
+
+}
+
+.info {
+    margin: 10px;
+
+}
+
+.cerrar img {
+    max-width: 15px;
+
+}
+
+section+div {
+
+    padding: 8%;
+}
+
+.circuitos-div h1 {
+    text-align: center;
+
+}
+
+

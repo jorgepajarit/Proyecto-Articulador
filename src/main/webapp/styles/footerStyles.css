@@ -1,0 +1,84 @@
+@charset "UTF-8";
+footer {
+    background-color: #f7f7f7;
+    padding: 30px 0 15px;
+  }
+  
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .list-footer .contacts-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+    padding-top: 25px;
+  }
+  
+  .list-footer .contacts-list li{
+    display: inline-block;
+    text-align: left;
+      padding: 0 10px;
+      /* Ajustar el espacio dentro de cada elemento de la lista */
+      margin: 0 5px;
+      /* Ajustar el espacio entre los elementos de la lista */
+  }
+  .footer-left,
+  .footer-right {
+    width: 45%;
+  }
+  
+  .footer-left h3,
+  .footer-right h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-left p,
+  .footer-right p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  form {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  input[type="email"] {
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    width: 70%;
+    font-size: 14px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .footer-text{
+    padding: 15px;
+  }

@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* box-sizing se utiliza para controlar cómo se calcula el tamaño total de un elemento en el modelo de caja */
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding: 110px 0 10px 0;
+    color: rgba(0, 0, 0, 0.5)
+}
+
+.container-list .title-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.container-list .title-list li a{
+    display: inline-block;
+    padding: 0 20px;
+    /* Ajustar el espacio dentro de cada elemento de la lista */
+    margin: 0 10px;
+    /* Ajustar el espacio entre los elementos de la lista */
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+#ferrari:hover{
+    color: #ff0000;
+}
+#mercedes:hover{
+    color: #4bddb4;
+}
+@keyframes changeColor {
+    0% { color: red; } /* Inicio de la animación: color rojo */
+    50% { color: blue; } /* Mitad de la animación: color azul */
+    100% { color: red; } /* Final de la animación: color rojo */
+}
+
+#redbull:hover {
+    animation: changeColor 1s infinite; /* Aplicar la animación al pasar el mouse sobre el elemento */
+}
+#williams:hover{
+    color: #1586ff;
+}
+#hass:hover{
+    color: #ff1515;
+}
+#stake:hover{
+    color: #15ff19;
+}
+#hass:hover{
+    color: #ff1515;
+}
+
+.item img {
+    max-width: 100%;
+    /*no se puede salir*/
+}
+
+/* carrito */
+
+.icon-cart{
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+
+.icon-cart:hover{
+    cursor: pointer;
+}
+
+.container-icon {
+    position: relative;
+}
+
+.count-products {
+    position: absolute;
+    top: 2%;
+    left: 0;
+    background-color: #000000;
+    color: #ffffff;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#cont-products{
+    font-size: 12px;
+}
+
+.container-cart-products {
+    /* contenedor principal carrito */
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #ffffff;
+    width: 400px;
+    z-index: 1; /*mostrar informacion por encima*/
+    box-shadow: 0 10px 20px rgba(0, 0,0,0.20);
+    border-radius: 10px;
+}
+
+.cart-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* distribuir el espacio disponible entre los elementos de un contenedor de manera uniforme */
+    padding: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.info-cart-product {
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+}
+
+.title-product-cart{
+    font-size: 20px;
+}
+
+.price-product-cart{
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.cant-prod-cart{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.icon-close{
+    width: 25px;
+    height: 25px;
+}
+
+.icon-close:hover{
+    cursor: pointer;
+    stroke: red;
+}
+
+.cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.cart-total h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.total{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.hidden-cart{
+    display: none;
+}
+
+/*base de tienda*/
+
+.container-items {
+    padding-top: 25px;
+    padding-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item {
+    border-radius: 50px 50px 50px 50px;
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    /* el contenido se ajustará dentro del contenedor de manera que cubra completamente el área disponible */
+    border-radius: 50px 50px 0 0;
+    transition: all 0.3s ease 0s;
+}
+
+.item:hover {
+    box-shadow: 0px 2px 20px 10px rgba(247, 141, 141, 0.4);
+}
+
+.item figure {
+    overflow: hidden;
+    /*para que no se desborde imagen*/
+}
+
+.item:hover img {
+    transform: scale(1.02);
+}
+
+.info-product {
+    padding: 15px 30px;
+    line-height: 2;
+    /*interlineado*/
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 900;
+    color: black
+}
+
+.info-product button {
+    border: none;
+    background: none;
+    background-color: black;
+    color: #f3f3f3;
+    padding: 15px 10px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+
+

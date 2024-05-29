@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faceted-project>
+<<<<<<< HEAD
   <runtime name="Tomcat v10.1 Cristian"/>
   <fixed facet="jst.web"/>
   <fixed facet="wst.jsdt.web"/>
   <fixed facet="java"/>
+=======
+  <runtime name="apache-tomcat-10.1.19"/>
+  <fixed facet="java"/>
+  <fixed facet="jst.web"/>
+  <fixed facet="wst.jsdt.web"/>
+>>>>>>> branch 'main' of https://github.com/jorgepajarit/Proyecto-Articulador.git
   <installed facet="java" version="17"/>
   <installed facet="jst.web" version="6.0"/>
   <installed facet="wst.jsdt.web" version="1.0"/>
