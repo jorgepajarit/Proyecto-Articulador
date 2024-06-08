@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,10 +14,10 @@
       </div>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="products.html">Productos</a></li>
-          <li><a href="circuitos.html">Circuitos</a></li>
-          <li><a href="index_escuderias.html">Escuderias</a></li>
+          <li><a href="index">Inicio</a></li>
+          <li><a href="tienda">Productos</a></li>
+          <li><a href="circuito">Circuitos</a></li>
+          <li><a href="escuderia">Escuderias</a></li>
         </ul>
       </nav>
       <a class="btn" href="#footerId"><button>Contacto</button></a>
