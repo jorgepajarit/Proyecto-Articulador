@@ -14,10 +14,10 @@
       </div>
       <nav>
         <ul class="nav-links">
-          <li><a href="index">Inicio</a></li>
+          <li><a href="home">Inicio</a></li>
           <li><a href="tienda">Productos</a></li>
-          <li><a href="circuito">Circuitos</a></li>
-          <li><a href="escuderia">Escuderias</a></li>
+          <li><a href="circuitos">Circuitos</a></li>
+          <li><a href="escuderias">Escuderias</a></li>
         </ul>
       </nav>
       <a class="btn" href="#footerId"><button>Contacto</button></a>
