@@ -85,4 +85,4 @@ imagen_url) VALUES ('Chaqueta escuderia ferrari', 'Chaqueta ferrari',
 10,2,'assets/img/gorra-ferrari.jpg'),('Reloj escuderia ferrari','Reloj ferrari',500000,
 10,3,'assets/img/reloj-ferrari.jpg'),('Reloj hublot ferrari','Reloj hublot ferrari',700000,
 10,3,'assets/img/reloj-hublot-ferrari.jpg'),('Reloj pilota ferrari','Reloj pilota ferrari',600000,
-10,3,'assets/img/reloj-pilotta-ferrari.jpg')
+10,3,'assets/img/reloj-pilotta-ferrari.jpg');
