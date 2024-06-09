@@ -1,4 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import = "java.io.*,java.util.*,java.sql.*"%>
+<%@ page import = "jakarta.servlet.http.*,jakarta.servlet.*" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql"  prefix = "sql"%>
+
+<sql:setDataSource var="dbSource" driver="com.mysql.cj.jdbc.Driver"
+                   url="jdbc:mysql://localhost:3306/proyecto"
+                   user="dba" password="123456789.eT"/>
+
+<sql:query dataSource="${dbSource}" var="result">
+    SELECT * FROM productos;
+</sql:query>          
+                  
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +24,6 @@
 
   <body>
  <%@ include file ="header.jsp"  %>
-
     <h1>Tienda de Productos</h1>
 
     <div class="container-list">
@@ -24,7 +36,9 @@
         <li><a id="stake" href="">Stake</a></li>
       </ul>
     </div>
-
+	
+	<form action="CarritoSerlvlet" method="post">
+	
     <div class="container-icon">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +62,7 @@
       <div class="container-cart-products hidden-cart">
         <div class="cart-product">
           <div class="info-cart-product">
-            <span class="cant-prod-cart">1</span>
+            <span class="cant-prod-cart">1</span> <!-- ETIQUETA -->
             <p class="title-product-cart">Prueba</p>
             <span class="price-product-cart">800</span>
           </div>
@@ -141,6 +155,7 @@
         </div>
       </div>
     </div>
+    </form>
   <%@ include file ="footer.jsp"  %>
   <script src="js/products.js"></script>
 </body>
