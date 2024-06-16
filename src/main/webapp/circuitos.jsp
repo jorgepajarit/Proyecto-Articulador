@@ -55,6 +55,7 @@
             </c:forEach>
             </div>
         </ul>
+        <div class="overlay"></div>
     </div>
     <hr>
     <div class="cronometro_div">
@@ -77,7 +78,8 @@
                 clearInterval(cronometro);
             }
         </script>
-        <div id="cronometro"></div>
+        <br>
+        <div><p id="cronometro"></p></div>
         <br><p>Tiempo transcurrido </p>
   <button class= "start"onclick="iniciarCronometro()">Start</button>
         <button class= "parar" onclick="detenerCrono()">Stop</button>
