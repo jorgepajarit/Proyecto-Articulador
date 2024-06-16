@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Fórmula 1</title>
-    <link rel="stylesheet" href="stylelogin.css">
+    <link rel="stylesheet" href="styles/stylelogin.css">
 </head>
 <body>
     <div class="login-container">
