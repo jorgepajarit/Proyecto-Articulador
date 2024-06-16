@@ -1,6 +1,6 @@
-<h2>Proyecto Articulador: Formla 1</h2>
+<h2>Proyecto Articulador: Formula 1</h2>
 
-Integrantes y funciones:
+<strong> Integrantes y funciones:</strong>
 
 <p> Jorge Pajarito: Index - Log in <br>
 Cristian Rivera: Productos y carrito <br>
