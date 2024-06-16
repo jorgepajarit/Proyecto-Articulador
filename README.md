@@ -2,8 +2,8 @@
 
 Integrantes y funciones:
 
-Jorge Pajarito: Index - Log in
-Cristian Rivera: Productos y carrito
-Juan Castañeda: Circuitos y medidor de reflejos
-Lina Castro: Escuderias
+<p> Jorge Pajarito: Index - Log in <br>
+Cristian Rivera: Productos y carrito <br>
+Juan Castañeda: Circuitos y medidor de reflejos <br>
+Lina Castro: Escuderias</p>
 
