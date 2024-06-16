@@ -9,10 +9,10 @@ Proyecto articulador de programacion III: Formula 1.
 Desarrollar una página web interactiva y funcional dedicada a la Fórmula 1 que ofrezca a los usuarios información detallada sobre las escuderías, circuitos, noticias, tienda en línea y otros contenidos relevantes, proporcionando una experiencia enriquecedora y atractiva para los aficionados.
 
 # Objetivo especifico
--Diseñar e implementar la estructura de la pagina web.
--Codificar la estructura basica del sitio web, tanto en frontend como en backend.
--Realizar pruebas de funcionalidad, usuabilidad y seguridad.
--aplicar los visto en clase , servlets y archivos jsp con eclipse 
+- Diseñar e implementar la estructura de la pagina web.
+- Codificar la estructura basica del sitio web, tanto en frontend como en backend.
+- Realizar pruebas de funcionalidad, usuabilidad y seguridad.
+- Aplicar los visto en clase , servlets y archivos jsp con eclipse 
 
 # Participantes y asignaciones
 - Jorge Luis Pajarito Londoño: Index interactivo ; login ; registro de usuarios ; recuperacion de contraseñas CRUD
