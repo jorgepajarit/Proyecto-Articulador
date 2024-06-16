@@ -24,7 +24,7 @@
         <hr>
         <br>
         <sql:query dataSource="${dbSource}" var="circuitosData">
-    SELECT  nombre_circuito, longitud, curvas, record, ganador, pole, url_video FROM circuitos;
+    SELECT  nombre_circuito, longitud, curvas, record, ganador, pole, url_video, id_iframe FROM circuitos;
 </sql:query>
         <ul id="circuitos">
         <div class="circuitos-lista">
@@ -42,11 +42,9 @@
                             <b>RÉCORD:</b> <c:out value="${circuito.record}" /><br>
                             <b>GANADOR 2023:</b> <c:out value="${circuito.ganador}" /><br>
                             <b>POLE 2023:</b> <c:out value="${circuito.pole}" /><br>
-                            <br>
-                     
-                            <div class="video-circuito">
-                                <iframe id="videocir" width="628" height="435" src="<c:out value="${circuito.url_video}" />" title="Vuelta al circuito de ${circuito.nombre_circuito}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
+                            <br>            
+                                <iframe id="<c:out value="${circuito.id_iframe}" />" width="628" height="435" src="<c:out value="${circuito.url_video}" />?enablejsapi=1" title="Vuelta al circuito de ${circuito.nombre_circuito}"
+                                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
                            
                         </div>
                         <span id ="cerrar" class="cerrar"><img src="assets/cerrar.png" alt=""></span>
@@ -92,5 +90,6 @@
     
     <%@ include file="footer.jsp" %>
     <script src="js/circuitos.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>
