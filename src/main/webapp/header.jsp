@@ -20,7 +20,7 @@
           <li><a href="escuderias">Escuderias</a></li>
         </ul>
       </nav>
-      <a class="btn" href="#footerId"><button>Contacto</button></a>
+      <a class="btn" href="login.jsp"><button>Ingresar</button></a>
     </header>
   </section>
 </body>
