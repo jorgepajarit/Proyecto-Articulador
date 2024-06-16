@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .circuitos-lista {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -25,6 +28,7 @@
 }
 
 .circuitos-info {
+	 z-index: 10; 
     display: none;
     transition: opacity 0.3s ease;
     position: fixed;
@@ -75,6 +79,104 @@ section+div {
 .circuitos-div h1 {
     text-align: center;
 
+}
+
+.start{
+	
+  background:#ff0000a3;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  font-family: "Lucida Sans Unicode", "Lucida Grande";
+  margin: 10px;
+  border-radius:10px;
+}
+
+
+.start:hover{
+  background:#fff;
+  color:#e43e3e;
+}
+
+.start:before,.start:after{
+content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #d81c1c;
+  transition:400ms ease all;
+}
+
+.start:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.start:hover:before,.start:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+
+.parar{
+	
+  background:#fff;
+  color:#ff0000a3;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  font-family: "Lucida Sans Unicode", "Lucida Grande";
+  margin: 10px;
+  border-radius:10px;
+  border: solid 1px;
+}
+
+.parar:hover{
+  background:#ff0000a3;
+  color:#fff;
+}
+
+.parar:before,.parar:after{
+content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #efeaea;
+  transition:400ms ease all;
+}
+
+.parar:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.parar:hover:before,.parar:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+.cronometro_div{
+	
+		text-align:center;
+	margin-top:30px;
 }
 
 

@@ -45,7 +45,7 @@
                             <br>
                      
                             <div class="video-circuito">
-                                <iframe width="628" height="435" src="<c:out value="${circuito.url_video}" />" title="Vuelta al circuito de ${circuito.nombre_circuito}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe id="videocir" width="628" height="435" src="<c:out value="${circuito.url_video}" />" title="Vuelta al circuito de ${circuito.nombre_circuito}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                            
                         </div>
@@ -56,8 +56,8 @@
             </div>
         </ul>
     </div>
-    
-    <div class="cronometro">
+    <hr>
+    <div class="cronometro_div">
         <h3> Mide tus reflejos</h3>
         <script>
             var segundos = 0;
@@ -69,17 +69,23 @@
                     if(miliseg >= 1000){
                         segundos++;
                     }
-                    document.getElementById('contador').innerHTML = segundos + "." + miliseg;        
+                    document.getElementById('cronometro').innerHTML = segundos + "." + miliseg;        
                 }, 1);
             }
+
             function detenerCrono(){
                 clearInterval(cronometro);
             }
         </script>
-        <div id="contador"></div>
-        <button onclick="iniciarCronometro()">Iniciar</button>
-        <button onclick="detenerCrono()">Parar</button>
-        <p>Tiempo transcurrido </p>
+        <div id="cronometro"></div>
+        <br><p>Tiempo transcurrido </p>
+  <button class= "start"onclick="iniciarCronometro()">Start</button>
+        <button class= "parar" onclick="detenerCrono()">Stop</button>
+        
+    </div>
+
+    <div id="visitasContador">
+    <h2> Numero de visitas <%= request.getAttribute("visitas") %></h2>
     </div>
     
     <%@ include file="footer.jsp" %>
