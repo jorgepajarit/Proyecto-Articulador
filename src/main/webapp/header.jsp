@@ -27,11 +27,11 @@
           <div class="dropdown">
             <button onclick="toggleDropdown()" class="dropbtn"> <%= nombreUsuario %></button>
             <div id="myDropdown" class="dropdown-content">
-              <a href="login.jsp">Cerrar sesión</a>
+              <a href="Login">Cerrar sesión</a>
             </div>
           </div>
         <% } else { %>
-          <a href="login.jsp"><button>Ingresar</button></a>
+          <a href="Login"><button>Ingresar</button></a>
         <% } %>
       </div>
       

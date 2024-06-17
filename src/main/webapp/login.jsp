@@ -21,7 +21,7 @@
 <body>
     <div class="login-container">
         <h1>Iniciar Sesión</h1>
-        <form id="loginForm" action="LoginServlet" method="post" style="display: block;">
+        <form id="loginForm" action="Login" method="post" style="display: block;">
             <div class="form-group">
                 <label for="username">Usuario</label>
                 <input type="text" id="username" name="username" required>
