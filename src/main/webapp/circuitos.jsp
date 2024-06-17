@@ -21,6 +21,7 @@
 </head>
 <body>
     <%@ include file="header.jsp" %>
+    
     <div class="circuitos-div">
         <h1>Circuitos más importantes</h1>
         <hr>
@@ -94,11 +95,12 @@
     
     
     <div class="formScore">
-    <form action="guardarScore.jsp" method="post" >
-    <h2 class="animation a1">Guarda tu puntaje</h2>
-<label>Nombre: </label><input type="text" name="usuario" required><br>
-<label>Score: </label> <input type="text" name="score" id="id_score"  disabled="disabled" >
-<input type="submit" value="Agregar" class="btn">
+     <span class="cerrar"><img src="assets/cerrar.png" alt=""></span>
+    <h2>Guarda tu puntaje</h2>
+    <form action="guardarScore.jsp" method="post" class="formScoreform"> 
+<input placeholder="Nombre" type="text" name="usuario" required>
+<input type="text" name="puntaje" id="id_score"  readonly >
+<input type="submit" value="Agregar" class="btn1">
 </form>
     </div>
 

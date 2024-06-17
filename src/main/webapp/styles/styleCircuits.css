@@ -118,6 +118,10 @@ section+div {
 
 }
 
+.circuitos-div  {
+   padding:100px 100px;
+margin-top:30px;
+}
 .start{
 	width:30%;
   background:#ff0000a3;
@@ -298,8 +302,8 @@ font-size: 50px;
 
 
 .formScore{
-	  
-	 display: none;
+	
+	 		display: none;
             position: fixed;
             top: 50%;
             left: 50%;
@@ -310,7 +314,56 @@ font-size: 50px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             z-index: 9999; 
             flex-direction: column;
-   
+   	 		max-width: 80%;
+  		
             
 }
 
+.formScore h2{
+  margin: 0;
+  color: #4f46a5;
+  text-align:center;
+	
+}
+.formScoreform{
+	
+  padding: 0 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Rubik', sans-serif;
+  outline: 0;
+  transition: .2s;
+  margin-top: 20px;
+  box-sizing: border-box;
+  height: 100px;	
+}
+
+.formScoreform input{
+	margin-right:10px;
+	padding: 12px 8px;
+ font-family: "Frijole", system-ui;
+	font-size:20px;
+}
+
+.formScore:focus {
+  border-color: #0F7EF1;
+}
+
+
+.formScoreform .btn1{
+  position:relative;
+  padding: 12px 10px;
+  border: 0;
+  background: linear-gradient(to right, #de48b5 0%,#0097ff 100%); 
+  border-radius: 3px;
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+font-family: "Permanent Marker";
+  cursor:pointer;
+}
+
+.formScore .cerrar{
+	
+	margin-right: 8px;
+}
