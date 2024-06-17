@@ -54,4 +54,24 @@
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/Login</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>addToCarrito</display-name>
+    <servlet-name>addToCarrito</servlet-name>
+    <servlet-class>addToCarrito</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addToCarrito</servlet-name>
+    <url-pattern>/addToCarrito</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>loginNull</display-name>
+    <servlet-name>loginNull</servlet-name>
+    <servlet-class>loginNull</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginNull</servlet-name>
+    <url-pattern>/loginNull</url-pattern>
+  </servlet-mapping>
 </web-app>

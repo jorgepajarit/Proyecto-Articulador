@@ -75,6 +75,13 @@ CREATE TABLE usuarios (
   FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
 );
 
+CREATE TABLE carritotemp(
+  id_select INT AUTO_INCREMENT PRIMARY KEY,
+  id_producto INT,
+  nombre VARCHAR(255) NOT NULL,
+  valor INT
+);
+
 INSERT INTO categorias (nombre,descripcion) VALUES ('Abrigos','busos,chaquetas,abrigos'),
 ('Gorras','gorras,gorros,sombreros'),('Accesorios','Relojes,anillos,manillas');
 

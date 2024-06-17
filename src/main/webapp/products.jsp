@@ -11,7 +11,15 @@
 <sql:query dataSource="${dbSource}" var="result">
     SELECT * FROM productos;
 </sql:query>          
-                  
+      
+<sql:query dataSource="${dbSource}" var="carritotemp">
+    SELECT * FROM carritotemp;
+</sql:query>               
+
+<sql:query dataSource="${dbSource}" var="countCarritoTemp">
+    SELECT COUNT(*) AS total FROM carritotemp;
+</sql:query>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,33 +45,40 @@
         </ul>
     </div>
     
-    <form action="CarritoServlet" method="post">
+    <form action="addToCarrito" method="post">
         <div class="container-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
-            </svg>
-            <!-- contador de productos -->
-            <div class="count-products">
-                <span id="cont-products">0</span>
-            </div>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
+    </svg>
+    <!-- contador de productos -->
+    <div class="count-products">
+        <span id="cont-products">${countCarritoTemp.rows[0].total}</span>
+    </div>
 
-            <div class="container-cart-products hidden-cart">
-                <div class="cart-product">
-                    <div class="info-cart-product">
-                        <span class="cant-prod-cart">1</span> <!-- ETIQUETA -->
-                        <p class="title-product-cart">Prueba</p>
-                        <span class="price-product-cart">800</span>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-                    </svg>
+    <div class="container-cart-products hidden-cart">
+        <c:forEach var="producto" items="${carritotemp.rows}">
+            <div class="cart-product">
+                <div class="info-cart-product">
+                    <span class="cant-prod-cart">${loop.index + 1}</span> <!-- ETIQUETA -->
+                    <p class="title-product-cart">${producto.nombre}</p>
+                    <span class="price-product-cart">${producto.valor}</span>
                 </div>
-                <div class="cart-total">
-                    <h3>Total</h3>
-                    <span class="total">$200</span>
-                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
             </div>
+        </c:forEach>
+        <div class="cart-total">
+            <h3>Total</h3>
+            <c:set var="total" value="0" />
+            <c:forEach var="producto" items="${carritotemp.rows}">
+                <c:set var="total" value="${total + producto.valor}" />
+            </c:forEach>
+            <span class="total">${total}</span> 
+            <a href=""><span class="total">Comprar</span></a>
         </div>
+    </div>
+	</div>
 
         <div class="container-items">
             <c:forEach var="producto" items="${result.rows}">
@@ -75,12 +90,11 @@
                         <hr>
                         <h2>${producto.nombre}</h2>
                         <p class="price">Precio: ${producto.precio} Cop</p>
-                        <button type="submit" name="item" value="${producto.nombre}" onclick="document.getElementById('price').value=${producto.precio}">Añadir al carro</button>
+                        <button type="submit" name="item" value="${producto.id_producto}">Añadir al carro</button>
                     </div>
                 </div>
             </c:forEach>
         </div>
-        <input type="hidden" id="price" name="price" value=""/>
     </form>
     
     <%@ include file ="footer.jsp"  %>

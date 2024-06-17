@@ -92,8 +92,8 @@ h1 {
 
 .count-products {
     position: absolute;
-    top: 2%;
-    left: 0;
+    top: 60%;
+    left: 1%;
     background-color: #000000;
     color: #ffffff;
     width: 25px;
@@ -112,9 +112,9 @@ h1 {
     /* contenedor principal carrito */
     position: absolute;
     top: 50px;
-    left: 0;
+    left: 40px;
     background-color: #ffffff;
-    width: 400px;
+    width: 600px;
     z-index: 1; /*mostrar informacion por encima*/
     box-shadow: 0 10px 20px rgba(0, 0,0,0.20);
     border-radius: 10px;
