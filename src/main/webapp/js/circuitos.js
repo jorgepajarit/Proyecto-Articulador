@@ -55,7 +55,8 @@ document.addEventListener('DOMContentLoaded', function () {
                             players[iframe.id].pauseVideo();
                             
                         }
-                                                 
+                         
+                        
                         info.classList.remove('visible');
                         fondo.classList.remove('visible');
                         // Quitar la clase 'no-hover' al li actual

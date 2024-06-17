@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
 * {
   box-sizing: border-box;
   
 }
 
-
-body {
-	  font-family: "Exo 2", sans-serif;
-	
-	
-}
 .circuitos-lista {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -26,7 +22,7 @@ body {
     background-color: #f8f8f8;
     border-radius: 15px;
     box-shadow: 0 2px 4px rgba(224, 10, 10, 0.473);
-   
+   font-family: "Exo 2", sans-serif;
 
 }
 .circuitos-lista li:hover{
@@ -123,7 +119,7 @@ section+div {
 }
 
 .start{
-	
+	width:30%;
   background:#ff0000a3;
   color:#fff;
   border:none;
@@ -168,7 +164,7 @@ content:'';
 }
 
 .parar{
-	
+	width:30%;
   background:#fff;
   color:#ff0000a3;
   border:none;
@@ -219,11 +215,81 @@ content:'';
 }
 
 .cronometro_div p{
-  font-family: "Exo 2", sans-serif;
-
+   font-family: "Frijole", system-ui;
+ font-weight: 100;
+  font-style: normal;
 	
 }
 
+
+.cronometro_div h3{
+font-family: "Permanent Marker", cursive;
+font-style: normal;
+font-size: 50px;	
+}
+
+.scores{
+	margin-top:15px;
+	margin: 5px;
+   border-radius:10px;
+   height:60px;
+   background: #EABE3F;
+   color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-size:1.6em;
+    font-weight: 400;
+    line-height: 45px;
+    margin: 0 auto 2em;
+    max-width: 50%;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande";
+
+    @media (min-width: 400px) {
+        display: inline-block;
+        margin-right: 2.5em;
+
+        &:nth-of-type(even) {
+            margin-right: 0;
+        }
+    }
+
+    @media (min-width: 600px) {
+        &:nth-of-type(even) {
+            margin-right: 2.5em;
+        }
+
+        &:nth-of-type(5) {
+            margin-right: 0;
+        }
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+    
+    
+}
+.scores {
+    border: 0 solid;
+    box-shadow: inset 0 0 20px #EABE3F;
+    outline: 1px solid;
+    outline-color: #EABE3F;
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.scores:hover {
+   border: 1px solid;
+    box-shadow: inset 0 0 20px #EABE3F,
+        0 0 20px #EABE3F;
+    outline-color: #EABE3F;;
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #EABE3F;
+}
 
 
 
