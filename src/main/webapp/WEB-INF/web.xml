@@ -56,42 +56,12 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>controllerCrud</display-name>
-    <servlet-name>controllerCrud</servlet-name>
-    <servlet-class>controllerCrud</servlet-class>
+    <display-name>RegisterServlet</display-name>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>RegisterServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>controllerCrud</servlet-name>
-    <url-pattern>/controller</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>add</display-name>
-    <servlet-name>add</servlet-name>
-    <servlet-class>add</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>add</servlet-name>
-    <url-pattern>/add</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>delete</display-name>
-    <servlet-name>delete</servlet-name>
-    <servlet-class>delete</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>delete</servlet-name>
-    <url-pattern>/delete</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>update</display-name>
-    <servlet-name>update</servlet-name>
-    <servlet-class>update</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>update</servlet-name>
-    <url-pattern>/update</url-pattern>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
   </servlet-mapping>
 </web-app>
