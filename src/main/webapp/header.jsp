@@ -20,7 +20,8 @@
           <li><a href="escuderias">Escuderias</a></li>
         </ul>
       </nav>
-      <a class="btn" href="login.jsp"><button>Ingresar!</button></a>
+      <div class="btn"><a  href="login.jsp"><button> Ingresar!</button></a></div>
+      
     </header>
   </section>
 </body>

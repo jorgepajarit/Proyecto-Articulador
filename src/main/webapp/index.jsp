@@ -29,23 +29,21 @@
           <ul id="equipos">
             <div class="equipos-lista">
               <li>
-                <img
-                  src="assets/mercedeslogo.jpg"
-                  alt="Mercedes logo"
-                  width="50px"
-                /><a
-                  class="mercedes"
-                  href="https://www.mercedesamgf1.com"
-                  target="_blank"
-                  >Mercedes-AMG PETRONAS F1 Team</a
-                >
+                 <img
+      src="assets/mercedeslogo.jpg"
+      alt="Mercedes logo"
+      
+    />
+    <a class="mercedes"
+      href="https://www.mercedesamgf1.com"
+      target="_blank"
+    >Mercedes-AMG PETRONAS F1 Team</a>
               </li>
               <li>
                 <img
                   src="assets/logo reddbull.jpg"
                   alt="Red Bull Racing logo"
-                  width="50px"
-                />Red Bull Racing
+                  width="50px"/>Red Bull Racing
               </li>
               <li>
                 <img
@@ -178,19 +176,16 @@
       <section class="noticias1">
         <div class="noticias-pequenas1">
           <article class="noticia-pequena1">
-            <img src="imagen1.jpg" alt="Imagen de la primera noticia" />
-            <h3>Noticia 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <img src="assets/notipeq4.png" alt="Imagen de la  cuarta noticia pequena" />
+            <h3>Las mejores imagenes del GP de China</h3>
           </article>
           <article class="noticia-pequena1">
-            <img src="imagen2.jpg" alt="Imagen de la segunda noticia" />
-            <h3>Noticia 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <img src="assets/notipeq5.png" alt="Imagen de la quinta noticia" />
+           <h3>Las mejores imagenes del GP de Miami</h3>
           </article>
           <article class="noticia-pequena1">
-            <img src="imagen3.jpg" alt="Imagen de la tercera noticia" />
-            <h3>Noticia 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <img src="assets/notipeq6.png" alt="Imagen de la sexta noticia" />
+           <h3>Las mejores imagenes del GP de Monaco</h3>
           </article>
         </div>
         <article class="noticia-principal1">
@@ -205,12 +200,14 @@
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
+            
           </div>
           <h2>
             EQUIPO DE F1 EN JUEGO | LANZAMIENTO C44 | UNLEASHED para la
             temporada 2024 💚🖤
           </h2>
           <p>Nueva era, nueva energía, nueva imagen..</p>
+          
         </article>
       </section>
       <hr class="elegant-line" />
