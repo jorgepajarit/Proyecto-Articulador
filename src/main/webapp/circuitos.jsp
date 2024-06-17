@@ -79,9 +79,11 @@
         <br>
         <div><p id="cronometro"></p></div>
         <br><p>Tiempo transcurrido </p>
-  <button class= "start"onclick="iniciarCronometro()">Start</button>
+        <div class="botones_Cronometro">
+  		<button class= "start"onclick="iniciarCronometro()">Start</button>
         <button class= "parar" onclick="detenerCrono()">Stop</button>
-        
+        <button class= "scores" onclick="">High Scores</button>
+        </div>
     </div>
 
     <div id="visitasContador">
