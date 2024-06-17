@@ -103,10 +103,16 @@ main {
 
 .equipos-lista {
   display: grid;
-  grid-template-columns: repeat(5, 2fr);
+  grid-template-columns: repeat(5, 1fr); /* Ajustar las columnas para que se adapten mejor */
   grid-gap: 20px;
   list-style: none;
   padding: 0;
+}
+
+.mercedes {
+  text-decoration: none;
+  color: inherit; /* Mantener el color del texto heredado */
+  text-align: center; /* Centrar el texto */
 }
 
 .mercedes:hover {
@@ -115,36 +121,35 @@ main {
 
 .equipos-lista li {
   display: flex;
-  align-items: center;
+  flex-direction: column; /* Colocar los elementos en una columna */
+  align-items: center; /* Centrar los elementos horizontalmente */
   padding: 1rem;
   background-color: #f8f8f8;
   border-radius: 20px;
-  box-shadow: 0 2px 4px rgba(1, 1, 1, 1);
+  box-shadow: 0 2px 4px rgba(1, 1, 1, 0.1); /* Ajustar la sombra para que sea menos intensa */
 }
 
 .equipos-lista img {
-  margin-right: 1rem;
-  width: 100%;
-  max-width: 200px;
+  width: 155px; /* Ancho fijo para la imagen */
   height: auto;
+  margin-bottom: 0.5rem; /* Espacio entre la imagen y el texto */
 }
 
 /* estos estilos pertenecen al los acordeones */
 .noticias {
   display: flex;
+  justify-content: space-between; /* Distribuye las noticias principales y pequeñas */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente */
 }
 
 .noticia-principal {
   width: 60%;
-  margin-right: 20px;
-  /* Espacio entre la noticia principal y las noticias pequeñas */
-  border: 1px solid #ccc;
-  /* Delinea cada noticia pequeña con un borde gris */
-  border-radius: 5px;
-  /* Añade esquinas redondeadas */
-  padding: 10px;
-  /* Añade un espacio interno */
+  margin-bottom: 20px; /* Espacio entre la noticia principal y las noticias pequeñas */
+  border: 1px solid #ccc; /* Borde para la noticia principal */
+  border-radius: 5px; /* Esquinas redondeadas */
+  padding: 10px; /* Espacio interno */
   text-align: center;
+  max-height: 800px;
 }
 
 .noticia-principal p {
@@ -152,33 +157,35 @@ main {
 }
 
 .noticias-pequenas {
+  width: calc(40% - 20px); /* Ancho para las noticias pequeñas */
+  /* Resta el margen derecho para evitar desbordamiento */
   display: flex;
   flex-direction: column;
 }
 
-.noticia-pequena:hover {
-  border-color: red;
+.noticia-pequena {
+  margin-bottom: 20px; /* Espacio entre cada noticia pequeña */
+  border: 2px solid #ccc; /* Borde para cada noticia pequeña */
+  border-radius: 5px; /* Esquinas redondeadas */
+  padding: 10px; /* Espacio interno */
+  text-align: center;
 }
 
-.noticia-pequena {
-  margin-bottom: 20px;
-  /* Espacio entre cada noticia pequeña */
-  border: 2px solid #ccc;
-  /* Delinea cada noticia pequeña con un borde gris */
-  border-radius: 5px;
-  /* Añade esquinas redondeadas */
-  padding: 10px;
-  /* Añade un espacio interno */
-  text-align: center;
+.noticia-pequena:hover {
+  border-color: red; /* Cambio de color del borde al pasar el mouse */
 }
 
 .noticia-pequena p {
   text-align: justify;
 }
 
+.noticia-principal img,
 .noticia-pequena img {
-  width: 60%;
-  height: auto;
+  max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+  display: block; /* Elimina el espacio adicional debajo de la imagen */
+  border-radius: 5px; /* Esquinas redondeadas */
+  margin-bottom: 10px; /* Espacio entre la imagen y el texto */
 }
 
 /* segunda parte de noticias al contratio */
@@ -194,6 +201,13 @@ main {
   /* Espacio entre las noticias pequeñas y la noticia principal */
 }
 
+.noticia-pequena1 img {
+  max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+  display: block; /* Elimina el espacio adicional debajo de la imagen */
+  border-radius: 5px; /* Esquinas redondeadas */
+  margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
 @keyframes titileo {
   0% {
     box-shadow: 0 0 10px #04da04;
@@ -216,9 +230,10 @@ main {
   border: 5px
     /*solid #036b11*/
   ;
-  /* Borde para la noticia principal */
+    /* Borde para la noticia principal */
   border-radius: 5px;
   /* Esquinas redondeadas para la noticia principal */
+  max-height: 620px;
   padding: 10px;
   /* Espacio interno para la noticia principal */
   box-shadow: 0 0 10px #00FF00 inset, 0 0 10px 0px #000000 inset;
