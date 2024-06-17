@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/* Estilos para el encabezado */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid rgb(8, 7, 7);
+    border-radius: 10px;
+    overflow-x: auto; /* Permite desplazamiento horizontal en dispositivos pequeños */
+}
+
+h1 {
+    text-align: center;
+    color: red;
+}
+
+img{
+	height: 80px;
+	width: auto;
+	object-fit: cover;
+    /* el contenido se ajustará dentro del contenedor de manera que cubra completamente el área disponible */
+    border-radius: 50px 50px 0 0;
+    transition: all 0.2s ease 0s;
+}
+
+img:hover{
+	transform: scale(1.1);
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid rgb(8, 7, 7);
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+}
+
+.product-table th, .product-table td {
+    border: 1px solid rgb(8, 7, 7);
+    padding: 8px;
+    text-align: left;
+}
+
+.product-table th {
+    background-color: rgba(249, 249, 249, 0.5);
+    color: rgb(8, 7, 7);
+}
+
+.product-table td {
+    background-color: transparent;
+}
+
+.product-table button, #btnAgregar {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50px; /* Border radius de 50px para los botones */
+}
+
+#btnAgregar{
+    margin-bottom: 10px;
+}
+.product-table button:hover, #btnAgregar:hover {
+    background-color: darkred;
+}
+
+.btnActualizar, .btnEliminar {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 50px;
+}
+
+.btnActualizar:hover, .btnEliminar:hover {
+    background-color: darkred;
+}
+
+/* Estilos para hacer la tabla responsive */
+@media (max-width: 768px) {
+    .container {
+        overflow-x: auto; 
+    }
+    
+    .product-table {
+        width: 100%;
+    }
+    
+    .product-table th, .product-table td {
+        white-space: normal;
+        font-size: 14px; 
+    }
+}
