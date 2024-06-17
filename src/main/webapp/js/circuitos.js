@@ -70,23 +70,37 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
     
-    const formContainer = document.querySelector('.formScore');
+    const formScore = document.querySelector('.formScore');
      const fondo = document.querySelector('.overlay');
     document.getElementById('stop').addEventListener('click', () => {
         // Mostrar el formulario y el fondo oscuro
-        formContainer.style.display = 'block';
-        fondo.style.display = 'block';
+        formScore.style.display = 'block';
+         fondo.classList.add('visible');
     });
 
-    // Agregar un evento para ocultar el formulario al hacer clic fuera de él
-  
 
-    // Lógica existente para el formScore (si es necesario)
-    const formScore = document.querySelector('.formScore'); 
-    if(formScore){
+if (formScore) {
         formScore.addEventListener('click', (event) => {
             event.stopPropagation();
         }, { once: true });
+
+        // Manejador para el botón de cerrar dentro del formulario
+        const cerrar = formScore.querySelector('.cerrar');
+        if (cerrar) {
+            cerrar.addEventListener('click', (event) => {
+                event.stopPropagation(); // Evitar la propagación del evento
+                
+                // Ocultar el fondo oscuro y el formulario
+                formScore.style.display = 'none';
+                
+                fondo.classList.remove('visible');
+                
+            });
+        }
     }
+
+
+     
+    
 });
 

@@ -17,7 +17,7 @@
                    user="root" password="Juanfelipe9902*"/>
                    <sql:update dataSource="${dbSource}">
                     INSERT INTO score (usuario, score ) 
-    VALUES ('${param.usuario}','${param.score}');
+    VALUES ('${param.usuario}','${param.puntaje}');
                    </sql:update>
                   <c:redirect url="/circuitos"/>  
 </body>
