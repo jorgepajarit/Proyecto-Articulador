@@ -86,3 +86,9 @@ imagen_url) VALUES ('Chaqueta escuderia ferrari', 'Chaqueta ferrari',
 10,3,'assets/img/reloj-ferrari.jpg'),('Reloj hublot ferrari','Reloj hublot ferrari',700000,
 10,3,'assets/img/reloj-hublot-ferrari.jpg'),('Reloj pilota ferrari','Reloj pilota ferrari',600000,
 10,3,'assets/img/reloj-pilotta-ferrari.jpg');
+CREATE TABLE score (
+    id INT AUTO_INCREMENT PRIMARY KEY,  
+    usuario VARCHAR(255) NOT NULL,      
+    score VARCHAR(255) NOT NULL,       
+    fecha DATETIME DEFAULT CURRENT_TIMESTAMP );
+
