@@ -336,7 +336,6 @@ textarea {
   color: #0ce7c3;
   transform: scale(1.1);
 }
-
 .section-formu .boton-enviar::after {
   content: "";
   display: block;
