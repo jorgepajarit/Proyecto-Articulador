@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const circuitos = document.querySelectorAll('#circuitos .circuitos-lista li');       
        const players = {};
+       
       
     // Función que se llama cuando la API de YouTube está lista
   window.onYouTubeIframeAPIReady = function () {
@@ -68,6 +69,24 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-});
+    
+    const formContainer = document.querySelector('.formScore');
+     const fondo = document.querySelector('.overlay');
+    document.getElementById('stop').addEventListener('click', () => {
+        // Mostrar el formulario y el fondo oscuro
+        formContainer.style.display = 'block';
+        fondo.style.display = 'block';
+    });
 
+    // Agregar un evento para ocultar el formulario al hacer clic fuera de él
+  
+
+    // Lógica existente para el formScore (si es necesario)
+    const formScore = document.querySelector('.formScore'); 
+    if(formScore){
+        formScore.addEventListener('click', (event) => {
+            event.stopPropagation();
+        }, { once: true });
+    }
+});
 
