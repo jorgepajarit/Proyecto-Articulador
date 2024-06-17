@@ -11,11 +11,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styleCircuits.css">
     <title>Circuitos</title>
     <link rel="icon" href="assets/logos.png" type="image/x-icon">
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <%@ include file="header.jsp" %>
@@ -69,7 +71,9 @@
                         segundos++;
                     }
                     document.getElementById('cronometro').innerHTML = segundos + "." + miliseg;        
+                    document.getElementById('id_score').value  = segundos + "." + miliseg; 
                 }, 1);
+                
             }
 
             function detenerCrono(){
@@ -81,9 +85,21 @@
         <br><p>Tiempo transcurrido </p>
         <div class="botones_Cronometro">
   		<button class= "start"onclick="iniciarCronometro()">Start</button>
-        <button class= "parar" onclick="detenerCrono()">Stop</button>
-        <button class= "scores" onclick="">High Scores</button>
+        <button id="stop"class= "parar" onclick="detenerCrono()">Stop</button>
+        <button class= "scores" onclick="" >High Scores</button>
+ 
         </div>
+    </div>
+    
+    
+    
+    <div class="formScore">
+    <form action="guardarScore.jsp" method="post" >
+    <h2 class="animation a1">Guarda tu puntaje</h2>
+<label>Nombre: </label><input type="text" name="usuario" required><br>
+<label>Score: </label> <input type="text" name="score" id="id_score"  disabled="disabled" >
+<input type="submit" value="Agregar" class="btn">
+</form>
     </div>
 
     <div id="visitasContador">
@@ -93,5 +109,6 @@
     <%@ include file="footer.jsp" %>
     <script src="js/circuitos.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
+
 </body>
 </html>
