@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Fórmula 1</title>
@@ -33,6 +34,14 @@
             <button type="submit">Ingresar</button>
             <p>¿No tienes cuenta? <a href="#" onclick="showRegisterForm()">Regístrate aquí</a></p>
         </form>
+        <% 
+        String errorMessage = (String) request.getAttribute("errorMessage");
+        if (errorMessage != null) {
+    %>
+        <p style="color:red;"><%= errorMessage %></p>
+    <% 
+        }
+    %>
 
         <form id="registerForm" action="RegisterServlet" method="post" style="display: none;">
             <h1>Registro de Usuario</h1>
@@ -50,3 +59,4 @@
     </div>
 </body>
 </html>
+    

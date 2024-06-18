@@ -41,7 +41,8 @@ public class LoginServlet extends HttpServlet {
                 response.sendRedirect("home");
             } else {
                 // Autenticación fallida, redirigir a la página de inicio de sesión
-                response.sendRedirect("login");
+                response.sendRedirect("Login");
+                
             }
         } catch (Exception e) {
             e.printStackTrace();
