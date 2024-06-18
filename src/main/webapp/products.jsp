@@ -59,13 +59,13 @@
         <c:forEach var="producto" items="${carritotemp.rows}">
             <div class="cart-product">
                 <div class="info-cart-product">
-                    <span class="cant-prod-cart">${loop.index + 1}</span> <!-- ETIQUETA -->
+                    <span class="cant-prod-cart">${loop.index}</span> <!-- ETIQUETA -->
                     <p class="title-product-cart">${producto.nombre}</p>
                     <span class="price-product-cart">${producto.valor}</span>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
+                <a href="deleteToCarrito?id=${producto.id_select}"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
+                </svg></a>
             </div>
         </c:forEach>
         <div class="cart-total">
