@@ -22,7 +22,9 @@ Desarrollar una página web interactiva y funcional dedicada a la Fórmula 1 que
 
 # Conclusiones
 
-Pendiente realizar conclusiones
+El proceso de desarrollo de este proyecto no solo culminó en la implementación exitosa de tecnologías avanzadas como JSP, JSTL, EJB’s y Java, sino que también fortaleció significativamente nuestro entendimiento colectivo. A lo largo del proyecto, enfrentamos y resolvimos desafíos técnicos complejos, lo que nos permitió mejorar nuestras habilidades en el diseño y la arquitectura de sistemas web. Además, la integración fluida con la base de datos MySQL consolidó nuestra capacidad para gestionar eficazmente datos críticos y optimizar el rendimiento del sistema.
+
+El diseño CSS desempeñó un papel crucial al garantizar una experiencia de usuario intuitiva y adaptable, lo que subraya la importancia de la estética y la usabilidad en el desarrollo web moderno. Este proyecto no solo cumplió con los requisitos funcionales establecidos, sino que también sentó las bases para futuras innovaciones y aplicaciones. La colaboración estrecha y la dedicación del equipo durante todo el proceso fueron fundamentales para alcanzar nuestros objetivos y nos han dejado con una base sólida de conocimientos y habilidades técnicas que aplicaremos en proyectos venideros.
 
 # ¿Como ejecutar nuestro proyecto?
 
