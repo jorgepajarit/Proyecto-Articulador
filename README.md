@@ -19,3 +19,25 @@ Desarrollar una página web interactiva y funcional dedicada a la Fórmula 1 que
 - Juan David Castañeda Tenjo: circuitos interactivos, información general, medidor de reflejos, contador de visitas.
 - Lina Yineth Castro: Escuderias
 - Cristian Eduardo Rivera: Tienda, carrito, agregar, productos
+
+# Conclusiones
+
+Pendiente realizar conclusiones
+
+# ¿Como ejecutar nuestro proyecto?
+
+**Requisitos:**
+
+-JDK 17. Java Development Kit v17.
+-Server Apache tomEE plume 10.0.0-M1
+-Entorno Eclipse o de preferencia
+-MySql instalado y configurado con los siguientes usuarios:
+
+**Tutorial para ejecutar el proyecto desde eclipse**.
+
+1. Tener instalado eclipse.
+2. Configurar Apache tomEE plume 10.0.0-M1. Si no cuenta con la instalación guiese del siguiente tutorial ->
+3. Una vez configurado, nos dirimos a 
+4. 
+
+--TERMINAR TUTORIAL
