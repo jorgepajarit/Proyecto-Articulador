@@ -84,4 +84,14 @@
     <servlet-name>Scores</servlet-name>
     <url-pattern>/Scores</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>deleteToCarrito</display-name>
+    <servlet-name>deleteToCarrito</servlet-name>
+    <servlet-class>deleteToCarrito</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteToCarrito</servlet-name>
+    <url-pattern>/deleteToCarrito</url-pattern>
+  </servlet-mapping>
 </web-app>

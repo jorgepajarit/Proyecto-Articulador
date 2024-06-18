@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Fórmula 1</title>
@@ -33,8 +34,7 @@
             <button type="submit">Ingresar</button>
             <p>¿No tienes cuenta? <a href="#" onclick="showRegisterForm()">Regístrate aquí</a></p>
         </form>
-
-        <form id="registerForm" action="RegisterServlet" method="post" style="display: none;">
+               <form id="registerForm" action="RegisterServlet" method="post" style="display: none;">
             <h1>Registro de Usuario</h1>
             <div class="form-group">
                 <label for="newUsername">Nuevo Usuario</label>
@@ -50,3 +50,4 @@
     </div>
 </body>
 </html>
+    

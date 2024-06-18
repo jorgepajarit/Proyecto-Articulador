@@ -35,18 +35,29 @@ public class LoginServlet extends HttpServlet {
 
             if (rs.next()) {
                 // Usuario autenticado correctamente, establecer sesión
+                int perfilUsuario = rs.getInt("perfil");
+
                 HttpSession session = request.getSession();
                 session.setAttribute("nombreUsuario", username); // Almacena el nombre de usuario en la sesión
+                session.setAttribute("perfilUsuario", perfilUsuario); // Almacena el perfil de usuario en la sesión
 
                 response.sendRedirect("home");
             } else {
                 // Autenticación fallida, redirigir a la página de inicio de sesión
-                response.sendRedirect("login");
+                response.sendRedirect("Login");
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
+
+
+
+
+
+
+
+
 
 

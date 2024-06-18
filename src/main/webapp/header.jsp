@@ -18,6 +18,14 @@
           <li><a href="tienda">Productos</a></li>
           <li><a href="circuitos">Circuitos</a></li>
           <li><a href="escuderias">Escuderias</a></li>
+           <% 
+             Integer perfilUsuario = (Integer) session.getAttribute("perfilUsuario");
+             if (perfilUsuario != null && perfilUsuario == 1) { 
+          %>
+             <li><a href="controller">Controller</a></li>
+          <% 
+             }
+          %>
         </ul>
       </nav>
           <div class="btn">
