@@ -34,16 +34,7 @@
             <button type="submit">Ingresar</button>
             <p>¿No tienes cuenta? <a href="#" onclick="showRegisterForm()">Regístrate aquí</a></p>
         </form>
-        <% 
-        String errorMessage = (String) request.getAttribute("errorMessage");
-        if (errorMessage != null) {
-    %>
-        <p style="color:red;"><%= errorMessage %></p>
-    <% 
-        }
-    %>
-
-        <form id="registerForm" action="RegisterServlet" method="post" style="display: none;">
+               <form id="registerForm" action="RegisterServlet" method="post" style="display: none;">
             <h1>Registro de Usuario</h1>
             <div class="form-group">
                 <label for="newUsername">Nuevo Usuario</label>
