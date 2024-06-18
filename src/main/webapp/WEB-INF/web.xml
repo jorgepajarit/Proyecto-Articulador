@@ -94,4 +94,34 @@
     <servlet-name>deleteToCarrito</servlet-name>
     <url-pattern>/deleteToCarrito</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>buyCarrito</display-name>
+    <servlet-name>buyCarrito</servlet-name>
+    <servlet-class>buyCarrito</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>buyCarrito</servlet-name>
+    <url-pattern>/buyCarrito</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>buy</display-name>
+    <servlet-name>buy</servlet-name>
+    <servlet-class>buy</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>buy</servlet-name>
+    <url-pattern>/buy</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>registerPedido</display-name>
+    <servlet-name>registerPedido</servlet-name>
+    <servlet-class>registerPedido</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>registerPedido</servlet-name>
+    <url-pattern>/registerPedido</url-pattern>
+  </servlet-mapping>
 </web-app>

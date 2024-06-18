@@ -43,14 +43,17 @@ CREATE TABLE clientes (
   telefono VARCHAR(20),
   fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+-- Tabla para control de pedidos
 CREATE TABLE pedidos (
-  id_pedido INT AUTO_INCREMENT PRIMARY KEY,
-  id_cliente INT,
+  id_pedido INT ,
+  id_producto INT,
+  nombre_producto VARCHAR(255) NOT NULL,
   fecha_pedido TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  total DECIMAL(10, 2) NOT NULL,
-  estado ENUM('pendiente', 'procesando', 'enviado', 'completado', 'cancelado') DEFAULT 'pendiente',
-  FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
+  total INT NOT NULL,
+  estado ENUM('pendiente', 'procesando', 'enviado', 'completado', 'cancelado') DEFAULT 'pendiente'
 );
+
 CREATE TABLE detalle_pedidos (
   id_detalle INT AUTO_INCREMENT PRIMARY KEY,
   id_pedido INT,

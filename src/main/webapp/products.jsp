@@ -8,6 +8,7 @@
                    url="jdbc:mysql://localhost:3306/proyecto"
                    user="root" password="Juanfelipe9902*"/>
 
+<!-- Tienda de productos. Se trae la información de productos, carritotemp que es una tabla temporal del carrito y un contador de las filas de carrito temp -->
 <sql:query dataSource="${dbSource}" var="result">
     SELECT * FROM productos;
 </sql:query>          
@@ -54,12 +55,13 @@
     <div class="count-products">
         <span id="cont-products">${countCarritoTemp.rows[0].total}</span>
     </div>
-
+	<!-- Carrito. Con una animación de css se oculta y muestra los valores de carrito temp -->
     <div class="container-cart-products hidden-cart">
+    <c:set var="counter" value="1" /> <%-- variable para el puesto de cada puntaje dentro de la tabla --%>
         <c:forEach var="producto" items="${carritotemp.rows}">
             <div class="cart-product">
                 <div class="info-cart-product">
-                    <span class="cant-prod-cart">${loop.index}</span> <!-- ETIQUETA -->
+                    <span class="cant-prod-cart">${counter}</span> <!-- ETIQUETA -->
                     <p class="title-product-cart">${producto.nombre}</p>
                     <span class="price-product-cart">${producto.valor}</span>
                 </div>
@@ -67,6 +69,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
                 </svg></a>
             </div>
+          <c:set var="counter" value="${counter + 1}" />  <%-- se va sumando uno a la variable para el puesto --%>
         </c:forEach>
         <div class="cart-total">
             <h3>Total</h3>
@@ -75,11 +78,12 @@
                 <c:set var="total" value="${total + producto.valor}" />
             </c:forEach>
             <span class="total">${total}</span> 
-            <a href=""><span class="total">Comprar</span></a>
+            <a href="buy" target="_blank"><span class="total">Comprar</span></a>
         </div>
     </div>
 	</div>
-
+			
+		<!-- ForEach para iterar sobre productos y mostrar toda la información de la tienda -->
         <div class="container-items">
             <c:forEach var="producto" items="${result.rows}">
                 <div class="item">

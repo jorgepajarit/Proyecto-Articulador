@@ -14,6 +14,7 @@
     url="jdbc:mysql://localhost:3306/proyecto"
     user="dba" password="123456789.eT" />
 
+<!-- Formulario para actualizar el producto. Se realiza un select para traer la información y mostrar que se va actualizar -->
 <sql:query dataSource="${dbSource}" var="result">
     SELECT * FROM productos WHERE id_producto = ${param.id};
 </sql:query>

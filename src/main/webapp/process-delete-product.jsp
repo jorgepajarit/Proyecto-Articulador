@@ -11,7 +11,8 @@
 <sql:setDataSource var="dbSource" driver="com.mysql.cj.jdbc.Driver"
     url="jdbc:mysql://localhost:3306/proyecto"
     user="dba" password="123456789.eT" />
-    
+
+<!-- Borrar usuarios del crud, recibe un parametro enviado desde controller -->
 <sql:update dataSource="${dbSource}">
     DELETE FROM productos WHERE id_producto = ${param.id};
 </sql:update>
