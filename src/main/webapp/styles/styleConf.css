@@ -1,0 +1,88 @@
+@charset "UTF-8";
+body {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid red;
+    padding: 20px;
+    max-width: 80%;
+    text-align: center;
+  }
+  
+  .formulario {
+    margin: auto;
+    max-width: 600px;
+  }
+  
+  h2 {
+    color: #ff5733;
+  }
+  
+  p {
+    color: #000000; 
+  }
+  
+  .opciones {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #ff2f00; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: darkred;
+   
+  }
+  
+  form {
+    text-align: left;
+  }
+  
+  label {
+    color: #000000; 
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 50px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049; 
+  }
+  
+  .advertencia {
+    color: #f44336; 
+    font-style: italic;
+  }
+  
