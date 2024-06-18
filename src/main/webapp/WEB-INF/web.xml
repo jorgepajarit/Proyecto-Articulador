@@ -74,4 +74,14 @@
     <servlet-name>loginNull</servlet-name>
     <url-pattern>/loginNull</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Scores</display-name>
+    <servlet-name>Scores</servlet-name>
+    <servlet-class>Scores</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Scores</servlet-name>
+    <url-pattern>/Scores</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
+
+ /* Estilo de la body */
+body {
+			margin-top:10px;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+             text-align: center;
+        }
+        
+        
+   h2{
+    font-family: "Frijole", system-ui;
+   
+   }     
+        .tableScore {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        /* Estilo de la tabla */
+        .tableScore table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        /* Estilo de las cabeceras de la tabla */
+        .tableScore th {
+            background-color: #ba2828bf;
+            color: white;
+            padding: 10px;
+        }
+
+        .tableScore tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .tableScore tr:hover {
+            background-color: #ddd;
+        }
+
+        /* Estilo de las celdas de la tabla */
+        .tableScore td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Estilo adicional para los botones */
+        .tableScore button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .tableScore button:hover {
+            background-color: #45a049;
+        }
