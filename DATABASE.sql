@@ -1,9 +1,9 @@
 -- Scripts de Mysql para poder correr el proyecto en tu servidor.
 
--- Creación de base de datos
+-- Creación de base de datos para el proyecto
 CREATE DATABASE proyecto;
 
--- Creación de tabla circuitos
+-- Creación de tabla circuitos guardando la información de los circuitos
 CREATE TABLE circuitos (
   id_circuito int NOT NULL AUTO_INCREMENT,
   nombre_circuito varchar(50) DEFAULT NULL,
@@ -34,7 +34,7 @@ CREATE TABLE categorias (
   descripcion TEXT
 );
 
--- Tabla clientes
+-- Tabla clientes para a futuro guardar nuestros clientes potenciales
 CREATE TABLE clientes (
   id_cliente INT AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(255) NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE clientes (
   fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Tabla para control de pedidos
+-- Tabla para control de pedidos para saber el estado de los pedidos y el control de los mismos (futura mejora. No implementada)
 CREATE TABLE pedidos (
   id_pedido INT ,
   id_producto INT,
@@ -54,6 +54,7 @@ CREATE TABLE pedidos (
   estado ENUM('pendiente', 'procesando', 'enviado', 'completado', 'cancelado') DEFAULT 'pendiente'
 );
 
+-- Tabla para dar detalles de pedido (futura mejora. No implementada)
 CREATE TABLE detalle_pedidos (
   id_detalle INT AUTO_INCREMENT PRIMARY KEY,
   id_pedido INT,
@@ -63,11 +64,15 @@ CREATE TABLE detalle_pedidos (
   FOREIGN KEY (id_pedido) REFERENCES pedidos(id_pedido),
   FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
 );
+
+-- Tabla para dar manejo a los metodos de pago (futura mejora. No implementada)
 CREATE TABLE metodos_pago (
   id_metodo INT AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(255) NOT NULL,
   descripcion TEXT
 );
+
+-- Tabla para confirmar y controlar pagos (futura mejora. No implementada)
 CREATE TABLE pagos (
   id_pago INT AUTO_INCREMENT PRIMARY KEY,
   id_pedido INT,
@@ -77,7 +82,8 @@ CREATE TABLE pagos (
   FOREIGN KEY (id_pedido) REFERENCES pedidos(id_pedido),
   FOREIGN KEY (id_metodo) REFERENCES metodos_pago(id_metodo)
 );
---LOGIN
+
+-- Tabla de usuarios utilizada para el registro del login, con diferentes tipos de perfiles para manejar los accessos.
 CREATE TABLE usuarios (
   id_usuario int NOT NULL AUTO_INCREMENT,
   nombre_usuario varchar(255) NOT NULL,
@@ -87,10 +93,15 @@ CREATE TABLE usuarios (
   UNIQUE KEY nombre_usuario (nombre_usuario)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO usuarios(nombre_usuario, contrasena, perfil) VALUES
-('jorge pajarito', 123, 1);
+-- Tabla para guardar puntaje de nuestro juego de reflejos.
+CREATE TABLE score (
+    id INT AUTO_INCREMENT PRIMARY KEY,  
+    usuario VARCHAR(255) NOT NULL,      
+    score VARCHAR(255) NOT NULL,       
+    fecha DATETIME DEFAULT CURRENT_TIMESTAMP );
 
--- Tabla para carrito
+-- Tabla para carrito, donde se almacenan los datos de forma temporal, luego de ser pagos pasan estos datos a pedido. 
+-- Se utiliza la tabla para el carrito pero falta el pago e implementar los pedidos
 CREATE TABLE carritotemp(
   id_select INT AUTO_INCREMENT PRIMARY KEY,
   id_producto INT,
@@ -99,6 +110,9 @@ CREATE TABLE carritotemp(
 );
 
 -- Inserción de datos para el proyecto.
+INSERT INTO usuarios(nombre_usuario, contrasena, perfil) VALUES
+('jorge pajarito', 123, 1);
+
 INSERT INTO categorias (nombre,descripcion) VALUES ('Abrigos','busos,chaquetas,abrigos'),
 ('Gorras','gorras,gorros,sombreros'),('Accesorios','Relojes,anillos,manillas');
 
@@ -111,10 +125,5 @@ imagen_url) VALUES ('Chaqueta escuderia ferrari', 'Chaqueta ferrari',
 10,3,'assets/img/reloj-hublot-ferrari.jpg'),('Reloj pilota ferrari','Reloj pilota ferrari',600000,
 10,3,'assets/img/reloj-pilotta-ferrari.jpg');
 
--- Tabla para guardar puntaje
-CREATE TABLE score (
-    id INT AUTO_INCREMENT PRIMARY KEY,  
-    usuario VARCHAR(255) NOT NULL,      
-    score VARCHAR(255) NOT NULL,       
-    fecha DATETIME DEFAULT CURRENT_TIMESTAMP );
+
 
