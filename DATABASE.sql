@@ -84,6 +84,9 @@ CREATE TABLE usuarios (
   UNIQUE KEY nombre_usuario (nombre_usuario)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+INSERT INTO usuarios(nombre_usuario, contrasena, perfil) VALUES
+('jorge pajarito', 123, 1);
+
 -- Tabla para carrito
 CREATE TABLE carritotemp(
   id_select INT AUTO_INCREMENT PRIMARY KEY,
