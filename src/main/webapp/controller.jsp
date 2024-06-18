@@ -5,7 +5,7 @@
 
 <sql:setDataSource var="dbSource" driver="com.mysql.cj.jdbc.Driver"
     url="jdbc:mysql://localhost:3306/proyecto"
-    user="dba" password="123456789.eT" />
+    user="root" password="Juanfelipe9902*" />
 
 <sql:query dataSource="${dbSource}" var="result">
     SELECT * FROM productos;
