@@ -1,5 +1,9 @@
+-- Scripts de Mysql para poder correr el proyecto en tu servidor.
+
+-- Creación de base de datos
 CREATE DATABASE proyecto;
 
+-- Creación de tabla circuitos
 CREATE TABLE circuitos (
   id_circuito int NOT NULL AUTO_INCREMENT,
   nombre_circuito varchar(50) DEFAULT NULL,
@@ -10,7 +14,7 @@ CREATE TABLE circuitos (
   pole varchar(100) DEFAULT NULL,
   PRIMARY KEY (id_circuito)
 )
---TIENDA
+-- Creación de tabla de productos utilizada en tienda
 CREATE TABLE productos (
   id_producto INT AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(255) NOT NULL,
@@ -22,11 +26,15 @@ CREATE TABLE productos (
   fecha_agregado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (id_categoria) REFERENCES categorias(id_categoria)
 );
+
+-- Tabla categorias para dar una categoria a los productos
 CREATE TABLE categorias (
   id_categoria INT AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(255) NOT NULL,
   descripcion TEXT
 );
+
+-- Tabla clientes
 CREATE TABLE clientes (
   id_cliente INT AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(255) NOT NULL,
@@ -75,6 +83,7 @@ CREATE TABLE usuarios (
   FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
 );
 
+-- Tabla para carrito
 CREATE TABLE carritotemp(
   id_select INT AUTO_INCREMENT PRIMARY KEY,
   id_producto INT,
@@ -82,6 +91,7 @@ CREATE TABLE carritotemp(
   valor INT
 );
 
+-- Inserción de datos para el proyecto.
 INSERT INTO categorias (nombre,descripcion) VALUES ('Abrigos','busos,chaquetas,abrigos'),
 ('Gorras','gorras,gorros,sombreros'),('Accesorios','Relojes,anillos,manillas');
 
@@ -93,6 +103,8 @@ imagen_url) VALUES ('Chaqueta escuderia ferrari', 'Chaqueta ferrari',
 10,3,'assets/img/reloj-ferrari.jpg'),('Reloj hublot ferrari','Reloj hublot ferrari',700000,
 10,3,'assets/img/reloj-hublot-ferrari.jpg'),('Reloj pilota ferrari','Reloj pilota ferrari',600000,
 10,3,'assets/img/reloj-pilotta-ferrari.jpg');
+
+-- Tabla para guardar puntaje
 CREATE TABLE score (
     id INT AUTO_INCREMENT PRIMARY KEY,  
     usuario VARCHAR(255) NOT NULL,      
