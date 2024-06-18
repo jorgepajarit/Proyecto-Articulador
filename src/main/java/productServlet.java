@@ -10,6 +10,7 @@ import jakarta.servlet.RequestDispatcher;
 public class productServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     
+  //Redirección a products.jsp
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	RequestDispatcher dispatcher = request.getRequestDispatcher("products.jsp");
     	request.setAttribute("autor", "Cristian Rivera");

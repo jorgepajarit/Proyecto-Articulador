@@ -12,7 +12,7 @@ import java.io.IOException;
 public class add extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-
+	//Redirección a addProducts.jsp
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	RequestDispatcher dispatcher = request.getRequestDispatcher("addProduct.jsp");
     	dispatcher.forward(request, response);

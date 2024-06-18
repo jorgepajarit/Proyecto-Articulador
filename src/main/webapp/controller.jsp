@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 
+<!-- CRUD DE PRODUCTOS -->
 <sql:setDataSource var="dbSource" driver="com.mysql.cj.jdbc.Driver"
     url="jdbc:mysql://localhost:3306/proyecto"
     user="dba" password="123456789.eT" />
@@ -48,6 +49,7 @@
                         <td>${row.precio}</td>
                         <td>${row.stock}</td>
                         <td>
+                        <!--Control de productos, si es 1 es abrigos, si es 2 es gorras y si es 3 es accesorios -->
                             <c:choose>
                                 <c:when test="${row.id_categoria == 1}">Abrigos</c:when>
                                 <c:when test="${row.id_categoria == 2}">Gorras</c:when>
@@ -61,6 +63,7 @@
                             <a href="update?id=${row.id_producto}">
                             	<button class="btnActualizar">Actualizar</button>
                             </a>
+                            <!-- Confirmación para eliminar -->
                             <a href="delete?id=${row.id_producto}" id="deleteLink-${row.id_producto}">
     							<button class="btnEliminar" onclick="return confirmarEliminar(${row.id_producto})">Eliminar</button>
 							</a>

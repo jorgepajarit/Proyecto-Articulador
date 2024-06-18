@@ -5,17 +5,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Inserción realizada con exito</title>
-
+<title>Pedido realizado</title>
 <sql:setDataSource var="dbSource" driver="com.mysql.cj.jdbc.Driver"
     url="jdbc:mysql://localhost:3306/proyecto"
     user="dba" password="123456789.eT" />
- <!-- Proceso para agregar productos nuevos -->
+    
+    <!-- Insertar datos para realizar pedido -->
 <sql:update dataSource="${dbSource}">
-    INSERT INTO productos (nombre, descripcion, precio, stock, id_categoria, imagen_url)
-    VALUES ('${param.nombre}','${param.descripcion}','${param.precio}','${param.stock}','${param.categoria}','${param.imagen_url}');
-</sql:update>  
-<c:redirect url="controller"/>
+    INSERT INTO pedidos_ (id_pedido, id_producto, nombre_producto, fecha_pedido, total, estado)
+    VALUES ('${param.cedula}','${param.descripcion}','${param.precio}','${param.stock}','${param.categoria}','${param.imagen_url}');
+</sql:update> 
+
+
 </head>
 <body>
 

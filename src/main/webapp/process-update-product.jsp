@@ -9,6 +9,8 @@
     <title>Procesar Actualización</title>
 </head>
 <body>
+
+<!-- Actualizar. Recibe un id desde controller y todos los parametros que se van a actualizar -->
     <sql:setDataSource var="dbSource" driver="com.mysql.cj.jdbc.Driver"
         url="jdbc:mysql://localhost:3306/proyecto"
         user="dba" password="123456789.eT" />
