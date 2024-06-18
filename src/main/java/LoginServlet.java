@@ -26,7 +26,7 @@ public class LoginServlet extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto", "root", "Juanfelipe9902*");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto", "root", "12345678");
 
             PreparedStatement ps = con.prepareStatement("SELECT * FROM usuarios WHERE nombre_usuario=? AND contrasena=?");
             ps.setString(1, username);
@@ -35,19 +35,29 @@ public class LoginServlet extends HttpServlet {
 
             if (rs.next()) {
                 // Usuario autenticado correctamente, establecer sesión
+                int perfilUsuario = rs.getInt("perfil");
+
                 HttpSession session = request.getSession();
                 session.setAttribute("nombreUsuario", username); // Almacena el nombre de usuario en la sesión
+                session.setAttribute("perfilUsuario", perfilUsuario); // Almacena el perfil de usuario en la sesión
 
                 response.sendRedirect("home");
             } else {
                 // Autenticación fallida, redirigir a la página de inicio de sesión
                 response.sendRedirect("Login");
-                
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
+
+
+
+
+
+
+
+
 
 
