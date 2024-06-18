@@ -76,12 +76,16 @@ CREATE TABLE pagos (
 );
 --LOGIN
 CREATE TABLE usuarios (
-  id_usuario INT AUTO_INCREMENT PRIMARY KEY,
-  nombre_usuario VARCHAR(255) NOT NULL UNIQUE,
-  contrasena VARCHAR(255) NOT NULL,
-  id_cliente INT,
-  FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
-);
+  id_usuario int NOT NULL AUTO_INCREMENT,
+  nombre_usuario varchar(255) NOT NULL,
+  contrasena varchar(255) NOT NULL,
+  perfil int DEFAULT NULL,
+  PRIMARY KEY (id_usuario),
+  UNIQUE KEY nombre_usuario (nombre_usuario)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO usuarios(nombre_usuario, contrasena, perfil) VALUES
+('jorge pajarito', 123, 1);
 
 -- Tabla para carrito
 CREATE TABLE carritotemp(
