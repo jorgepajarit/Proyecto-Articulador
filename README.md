@@ -78,11 +78,3 @@ Estas mejoras potenciales tienen como objetivo enriquecer la funcionalidad, la s
 -Entorno Eclipse o de preferencia
 -MySql instalado y configurado con los siguientes usuarios:
 
-**Tutorial para ejecutar el proyecto desde eclipse**.
-
-1. Tener instalado eclipse.
-2. Configurar Apache tomEE plume 10.0.0-M1. Si no cuenta con la instalación guiese del siguiente tutorial ->
-3. Una vez configurado, nos dirimos a 
-4. 
-
---TERMINAR TUTORIAL
